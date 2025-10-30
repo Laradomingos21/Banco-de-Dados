@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Banco de dados</title>
+</head>
+<body>
+    <header>
+        <h1>Banco de dados</h1>
+    </header>
+    <h2>O que é e para que serve</h2>
+    <p>SGBD (Sistema Gerenciador de Banco de Dados) é um software responsável por criar, gerenciar e manter bancos de dados. Em inglês, DBMS (DataBase Management System). Serve para armazenar, organizar, proteger e manipular dados de forma estruturada, garantindo acesso rápido, seguro e confiável às informações dentro de uma empresa ou sistema.</p>
+
+
+    <h2>Um SGBD normalmente possui:</h2>
+    <ul>
+        <li>Motor de banco de dados (executa as operações);</li>
+        <li>Subsistema de definição de dados (DDL) – define estrutura do banco;</li> 
+        <li>Subsistema de manipulação de dados (DML) – insere, altera, exclui e consulta dados; </li>
+        <li>Subsistema de administração – gerencia segurança, integridade e backups; </li>
+        <li>Subsistema de geração de aplicações – auxilia no desenvolvimento de sistemas que usam o banco. </li>
+    </ul>
+
+    <h2>Funções principais </h2>
+    <ul>
+        <b>Métodos de acesso</b>
+        <ul>
+            <li>DDL – define estrutura e tipos de dados.</li> 
+            <li>DML – manipula os dados (inserir, alterar, excluir, consultar).</li> 
+        </ul>
+       <b>Integridade semântica </b>
+        <ul>
+            <li>Garante que os dados sejam válidos e coerentes com o domínio da aplicação.</li>
+        </ul>
+        <b>Segurança</b>
+        <ul>
+            <li>Controle de acesso por usuários e permissões.</li>
+            <li>Proteção contra falhas e perda de dados (logs e backups).</li>
+        </ul>
+        <b>Concorrência </b>
+        <ul>
+            <li>Evita conflitos em acessos simultâneos, usando bloqueios (locks) ou timestamp.</li>
+        </ul>
+        <b>Independência</b>
+        <ul>
+            <li>Física: mudanças na forma de armazenamento não afetam o uso.</li> 
+            <li>Lógica: alterações na estrutura lógica não afetam as aplicações.</li>
+        </ul>
+    </ul>
+
+    <h2>Exemplo prático</h2>
+    <img src="https://sae.unb.br/cae/conteudo/unbfga/sbd/imagens/sgbd.png" alt="exemplo">
+
+    <h2>Tipos de bancos de dados</h2>
+    <h3>Banco de Dados Relacional (SQL)</h3>
+    <p>O banco de dados relacional organiza as informações em tabelas compostas por linhas e colunas, onde cada linha representa um registro (com uma chave exclusiva) e cada coluna corresponde a um atributo. Esse modelo é baseado na lógica relacional, o que torna os dados estruturados, consistentes e de fácil acesso.</p>
+    <p>Uma de suas maiores vantagens é o uso da linguagem SQL (Structured Query Language), que permite criar, consultar e manipular dados de forma padronizada e eficiente. </p>
+    <p>Os bancos relacionais priorizam consistência, integridade e controle transacional, sendo ideais para aplicações que exigem dados estruturados e precisos, como sistemas financeiros, cadastros e gestão empresarial. </p>
+
+    <h2>Banco de dados não relacional</h2>
+    <p>O banco de dados não relacional, também chamado de NoSQL (Not Only SQL), não utiliza o modelo tradicional de tabelas. Ele permite armazenar dados de forma flexível, em modelos como chave-valor, documentos (JSON), colunas ou grafos, adaptando-se melhor a grandes volumes de dados e estruturas não padronizadas.</p>
+    <p>Surgiu como alternativa moderna para lidar com dados não estruturados ou semiestruturados, comuns em aplicações de Big Data, redes sociais e Internet das Coisas (IoT).</p>
+    <p>Sua principal força está na escalabilidade horizontal (distribuição em vários servidores) e na velocidade de leitura e escrita, o que o torna ideal para sistemas que processam grandes quantidades de informações em tempo real. </p>
+
+    <h2>comparação entre os dois tipos</h2>
+    <table>
+        <tr>
+            <th>critério</th>
+            <th>SQL</th>
+            <th>NoSQL</th>
+        </tr>
+        <tr>
+            <td>estrutura</td>
+            <td>tabelas com linhas e colunas e esquema rígido </td>
+            <td>estruturas flexíveis como documentos, chave-valor, colunas ou grafos</td>
+        </tr>
+        <tr>
+            <td>flexibilidade</td>
+            <td>Baixa (depende de um esquema fixo)</td>
+            <td>Alta (permite mudanças e dados variados)</td>
+        </tr>
+        <tr>
+            <td>escalabilidade</td>
+            <td>baixa (depende de um esquema fixo)</td>
+            <td>alta (permite mudanças e dados variados)</td>
+        </tr>
+        <tr>
+            <td>consistência</td>
+            <td>Alta, com integridade garantida pelas propriedades ACID </td>
+            <td>Pode sacrificar consistência em favor de desempenho </td>
+        </tr>
+        <tr>
+            <td>desempenho</td>
+            <td>Ideal para dados estruturados e consultas complexas </td>
+            <td>Ideal para grandes volumes de dados não estruturados </td>
+        </tr>
+        <tr>
+            <td>linguagem de consulta</td>
+            <td>SQL </td>
+            <td>Linguagens específicas de cada tipo de banco </td>
+        </tr>
+        <tr>
+            <td>casos de uso</td>
+            <td>Cadastros, sistemas bancários, ERP </td>
+            <td>Redes sociais, Big Data, IoT, análise em tempo real </td>
+        </tr>
+    </table>
+    <p>portanto os bancos relacionais priorizam consistência e estrutura, enquanto os não relacionais priorizam velocidade e flexibilidade. A escolha entre eles depende do tipo de dado e das necessidades do sistema. </p>
+    <h2>Características e Importância no Desenvolvimento de Sistemas</h2>
+    <p>A escolha entre banco de dados relacional e não relacional impacta diretamente o desempenho, a escalabilidade e a confiabilidade de um sistema.</p>
+    <ul>
+        <li><strong>Relacionais (SQL):</strong></li>
+        <ul>
+            <li>Garantem integridade e consistência rigorosa dos dados (transações ACID).</li>
+            <li>São ideais para sistemas corporativos, com dados interligados e estruturados.</li>
+            <li>Facilitam o controle de relacionamentos complexos entre entidades.</li>
+            <li>Usam SQL para consultas padronizadas e relatórios precisos.</li>
+        </ul>
+        <li><strong>Não Relacionais (NoSQL):</strong></li>
+        <ul>
+            <li>Oferecem maior desempenho e flexibilidade em ambientes dinâmicos. </li>
+        </ul>
+    </ul>
+</body>
+</html>
